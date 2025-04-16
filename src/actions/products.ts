@@ -63,7 +63,7 @@ export async function editProduct(id:number,prevState: FormState, formData: Form
   }
 
   export async function removeProduct(id:number) {
-    deleteProduct(id);
+   await deleteProduct(id);
     revalidatePath("/products-db");
     
   }
